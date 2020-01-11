@@ -1,0 +1,18 @@
+version: "2"
+services:
+  lambdafunction:
+    container_name: d-lambda
+    image: lambci/lambda:python3.7
+    ports:
+      - "9001:9001"
+    environment:
+      - "AWS_ACCESS_KEY=minioadmin"
+      - "AWS_SECRET_KEY=minioadmin"
+      - "DOCKER_LAMBDA_STAY_OPEN=1"
+    volumes:
+      - ".:/var/task"
+    command: function_setup.lambda_handler
+networks:
+  default:
+    external:
+      name: minio-lambda-net
