@@ -1,0 +1,40 @@
+site_name: My Docs
+site_description: '自分のページ'
+site_author: 'nakano16180'
+site_url: https://nakano16180.github.io/aws-practice/
+
+# Repository
+repo_name: nakano16180/aws-practice
+repo_url: https://github.com/nakano16180/aws-practice
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright (c) 2020'
+
+# Documentation and theme
+docs_dir: 'docs'
+theme: 'material'
+
+# Options
+extra:
+  palette:
+    primary: 'Light Blue'
+    accent: 'Orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  i18n:
+    prev: 'Previous'
+    next: 'Next'
+  social:
+  - type: github
+    link: https://github.com/nakano16180
+  - type: twitter
+    link: https://twitter.com/newton112358
+
+# Extensions
+markdown_extensions:
+  - codehilite:
+  - admonition:
+  - toc:
+      permalink: '#'
