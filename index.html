@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -349,22 +349,20 @@
 <li><a href="https://github.com/lambci/docker-lambda">lambci/docker-lambda</a></li>
 </ul>
 <h3 id="run-as-a-api-server">Run as a API server<a class="headerlink" href="#run-as-a-api-server" title="Permanent link">#</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">docker run --rm \</span>
-<span class="err">  --name d-lambda \</span>
-<span class="err">  -p 9001:9001 \</span>
-<span class="err">  --net=minio-lambda-net \</span>
-<span class="err">  -e AWS_ACCESS_KEY_ID=minioadmin \</span>
-<span class="err">  -e AWS_SECRET_ACCESS_KEY=minioadmin \</span>
-<span class="err">  -e DOCKER_LAMBDA_STAY_OPEN=1 \</span>
-<span class="err">  -v &quot;$PWD&quot;:/var/task \</span>
-<span class="err">  lambci/lambda:nodejs10.x \</span>
-<span class="err">  index.handler</span>
+<div class="codehilite"><pre><span></span><code><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> \
+  <span class="o">--</span><span class="n">name</span> <span class="n">d</span><span class="o">-</span><span class="n">lambda</span> \
+  <span class="o">-</span><span class="n">p</span> <span class="mi">9001</span><span class="p">:</span><span class="mi">9001</span> \
+  <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">minio</span><span class="o">-</span><span class="n">lambda</span><span class="o">-</span><span class="n">net</span> \
+  <span class="o">-</span><span class="n">e</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="n">minioadmin</span> \
+  <span class="o">-</span><span class="n">e</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="n">minioadmin</span> \
+  <span class="o">-</span><span class="n">e</span> <span class="n">DOCKER_LAMBDA_STAY_OPEN</span><span class="o">=</span><span class="mi">1</span> \
+  <span class="o">-</span><span class="n">v</span> <span class="s2">&quot;$PWD&quot;</span><span class="p">:</span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">task</span> \
+  <span class="n">lambci</span><span class="o">/</span><span class="n">lambda</span><span class="p">:</span><span class="n">nodejs10</span><span class="o">.</span><span class="n">x</span> \
+  <span class="n">index</span><span class="o">.</span><span class="n">handler</span>
 </code></pre></div>
-
 
 <div class="codehilite"><pre><span></span><code>$ curl -X POST -d <span class="s1">&#39;{}&#39;</span> http://localhost:9001/2015-03-31/functions/myfunction/invocations
 </code></pre></div>
-
 
 <h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
@@ -422,7 +420,7 @@
     
       <script src="assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"."}})</script>
       
     
   </body>
